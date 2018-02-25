@@ -30,8 +30,7 @@ public class Calculator {
 
         for (MathEquation equation : equations) {
             equation.execute();
-            System.out.print("result = ");
-            System.out.println(equation.getResult());
+            System.out.println("1. result = " + equation.getResult());
         }
 
         double leftDouble = 4.0d;
@@ -39,7 +38,7 @@ public class Calculator {
 
         MathEquation executeEQ = new MathEquation('d');
         executeEQ.execute(leftDouble, rightDouble);
-        System.out.println("result = " + executeEQ.getResult());
+        System.out.println("2. result = " + executeEQ.getResult());
 
         CalculateBase[] calculators = {
             new Divider(100.0d, 50.0d),
@@ -50,9 +49,23 @@ public class Calculator {
         
         for (CalculateBase calc : calculators) {
             calc.calculate();
-             System.out.println("result = " + calc.getResult());
+             System.out.println("3. result = " + calc.getResult());
            
         }
+        
+        String[] statements = {
+            "divide 100.0 50.0",
+            "add 25.0 92.0",
+            "subtract 225.0 17.0",
+            "multiply 11.0 3.0"
+        };
+        
+        CalculateHelper helper = new CalculateHelper();
+        for(String statement:statements){
+            helper.process(statement);
+            System.out.println(helper);
+        }
+        
     }
 
 }
