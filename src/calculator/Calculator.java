@@ -5,6 +5,10 @@
  */
 package calculator;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 /**
  *
  * @author Alina
@@ -20,7 +24,6 @@ public class Calculator {
         double[] rightVals = {50.0d, 92.0d, 17.0d, 3.0d};
         char[] opCodes = {'d', 'a', 's', 'm'};
         double[] results = new double[opCodes.length];
-
 
         MathEquation[] equations = new MathEquation[4];
         equations[0] = new MathEquation('d', 100.0d, 50.0d);
@@ -46,26 +49,63 @@ public class Calculator {
             new Subtracter(225.0d, 17.0d),
             new Multiplier(11.0d, 3.0d)
         };
-        
+
         for (CalculateBase calc : calculators) {
             calc.calculate();
-             System.out.println("3. result = " + calc.getResult());
-           
+            System.out.println("3. result = " + calc.getResult());
+
         }
-        
+
+//    public void readStatements(String filename) throws IOException {
+//        BufferedReader reader = null;
+//        try {
+//            reader = new BufferedReader(new FileReader(filename));
+//            String line = null;
+//            CalculateHelper helper = new CalculateHelper();
+//            while ((line = reader.readLine()) != null) {
+//                String[] parts = line.split(" ");
+//                for (String statement : parts) {
+//                    try {
+//                        helper.process(statement);
+//                        System.out.println(helper);
+//                    } catch (InvalidStatementException e) {
+//                        System.out.println(e.getMessage());
+//                        if (e.getCause() != null) {
+//                            System.out.println("Original exception: " + e.getCause().getMessage());
+//                        }
+//                    }
+//                }
+//            }
+//        } finally {
+//            if (reader != null) {
+//                reader.close();
+//            }
+//        }
+//    }
+//
+//    readStatements("statements.txt");
         String[] statements = {
+            "add 1.0", //incorrect number of values
+            "add xx 25.0", //non numeric data 
+            "addX 0.0 0.0", //invalid command
             "divide 100.0 50.0",
             "add 25.0 92.0",
             "subtract 225.0 17.0",
             "multiply 11.0 3.0"
         };
-        
-        CalculateHelper helper = new CalculateHelper();
-        for(String statement:statements){
-            helper.process(statement);
-            System.out.println(helper);
-        }
-        
-    }
 
+        CalculateHelper helper = new CalculateHelper();
+        for (String statement : statements) {
+            try {
+                helper.process(statement);
+                System.out.println(helper);
+            } catch (InvalidStatementException e) {
+                System.out.println(e.getMessage());
+                if (e.getCause() != null) {
+                    System.out.println("Original exception: " + e.getCause().getMessage());
+                }
+            }
+
+        }
+    }
 }
