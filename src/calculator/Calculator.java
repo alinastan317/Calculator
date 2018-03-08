@@ -61,7 +61,6 @@ public class Calculator {
 //        try {
 //            reader = new BufferedReader(new FileReader(filename));
 //            String line = null;
-//            CalculateHelper helper = new CalculateHelper();
 //            while ((line = reader.readLine()) != null) {
 //                String[] parts = line.split(" ");
 //                for (String statement : parts) {

@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Alina/Documents/NetBeansProjects/Calculator/src/calculator/Calculator.java</file>
-            <file>file:/C:/Users/Alina/Documents/NetBeansProjects/Calculator/src/calculator/CalculateHelper.java</file>
-            <file>file:/C:/Users/Alina/Documents/NetBeansProjects/Calculator/src/calculator/MathEquation.java</file>
-            <file>file:/C:/Users/Alina/Documents/NetBeansProjects/Calculator/src/calculator/Subtracter.java</file>
-            <file>file:/C:/Users/Alina/Documents/NetBeansProjects/Calculator/src/calculator/MathCommand.java</file>
-            <file>file:/C:/Users/Alina/Documents/NetBeansProjects/Calculator/src/calculator/CalculateBase.java</file>
-            <file>file:/C:/Users/Alina/Documents/NetBeansProjects/Calculator/src/calculator/Adder.java</file>
-            <file>file:/C:/Users/Alina/Documents/NetBeansProjects/Calculator/src/calculator/Divider.java</file>
-            <file>file:/C:/Users/Alina/Documents/NetBeansProjects/Calculator/src/calculator/Multiplier.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
