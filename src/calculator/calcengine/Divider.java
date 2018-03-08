@@ -3,21 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package calculator;
+package calculator.calcengine;
 
 /**
  *
  * @author Alina
  */
-public class Adder extends CalculateBase{
-    public Adder(){};
-    public Adder (double leftVal, double rightVal){
+public class Divider extends CalculateBase{
+    public Divider(){};
+    public Divider (double leftVal, double rightVal){
         super(leftVal, rightVal);
     }
     
     @Override
     public void calculate(){
-        double value = getLeftVal() + getRightVal();
+        double value = getLeftVal() / getRightVal();
         setResult(value);
     }
 }

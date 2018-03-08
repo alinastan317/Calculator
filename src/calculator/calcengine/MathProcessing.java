@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package calculator;
+package calculator.calcengine;
 
 /**
  *
  * @author Alina
  */
-public enum MathCommand {
-    Add,
-    Subtract,
-    Multiply,
-    Divide    
+public interface MathProcessing {
+    String SEPARATOR = " ";
+    String getKeyword();
+    char getSymbol();
+    double doCalculation(double leftVal, double rightVal);
+    
 }
